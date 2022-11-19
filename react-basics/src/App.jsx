@@ -24,9 +24,14 @@ function App() {
     },
   ];
 
+  const addExpensehandler = (expenseData) =>{
+    console.log("In App.jsx");
+    console.log(expenseData)
+  }
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense onNewExpense={addExpensehandler} />
       <Expenses expenses={expenses} />
     </div>
   );
